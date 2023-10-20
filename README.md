@@ -14,7 +14,7 @@ __Compétences techniques pratiquées__
   J'ai remarqué l'usage de la propriété CSS opacity à 85% qui permet tester le montage des conditions du javascript.
   C'est une meilleure pratique qui permet d'être souple sur l'ordre des actions menées durant le codage.
 
-- Le script JS et la manipulation d'objet :
+- La manipulation d'éléments Javascript :
   
   J'ai appris à mélanger les images d'un tableau.
   Pour chaque image, un élément 'div' est créé et assigné à la variable box.
@@ -27,11 +27,11 @@ __Compétences techniques pratiquées__
   Si elles correspondent, elles sont marquées comme correspondantes et ne sont pas considérées comme ouverte.
   Si le nombre de boîtes correspondantes est égal au nombre total d'images, une alerte win est affichée.
   Si les deux premières boîtes ouvertes ne correspondents pas, elle sont simplement fermées.
-  Finamlement la boîte est ajoutée avec la classe 'game'.
+  Finalement la boîte est ajoutée avec la classe 'game'.
 
   J'ai compris comment fonctionne le script et qu'il n'est pas possible de considérer une constante image comme élémentHtml dans le javascript.
 
-- Constantes JS images:
+- L'identification de constantes images en Javascript :
    
   En collaborant avec mon fils de 4 ans pour la création des images, j'ai appris à adapter le javascript.
   J'ai compris comment intégrer une image à une constante. Pour cela, il est mieux de créer une 'id' à ces constantes.
