@@ -31,7 +31,7 @@ __Compétences techniques pratiquées__
 
   J'ai compris comment fonctionne le script et qu'il n'est pas possible de considérer une constante image comme élémentHtml dans le javascript.
 
-  - Constantes JS images:
+- Constantes JS images:
    
   En collaborant avec mon fils de 4 ans pour la création des images, j'ai appris à adapter le javascript.
   J'ai compris comment intégrer une image à une constante. Pour cela, il est mieux de créer une 'id' à ces constantes.
