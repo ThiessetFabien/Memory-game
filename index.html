@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouve les paires</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Trouve les paires</h2>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload();">Nouvelle partie</button>
+    </div>
+
+    <script>
+        const baleine1 = new Image(75,75);
+        baleine1.src = "./assets/baleine.jpg";
+        baleine1.id = "baleine";
+
+        const baleine2 = new Image(75,75);
+        baleine2.src = "./assets/baleine.jpg";
+        baleine2.id = "baleine";
+
+        const crocodile1 = new Image(75,75);
+        crocodile1.src = "./assets/crocodile.jpg";
+        crocodile1.id = "crocodile";
+
+        const crocodile2 = new Image(75,75);
+        crocodile2.src = "./assets/crocodile.jpg";
+        crocodile2.id = "crocodile";
+
+        const grenouille1 = new Image(75,75);
+        grenouille1.src = "./assets/grenouille.jpg";
+        grenouille1.id = "grenouille";
+
+        const grenouille2 = new Image(75,75);
+        grenouille2.src = "./assets/grenouille.jpg";
+        grenouille2.id = "grenouille";
+
+        const homard1 = new Image(75,75);
+        homard1.src = './assets/homard.jpg';
+        homard1.id = "homard";
+
+        const homard2 = new Image(75,75);
+        homard2.src = './assets/homard.jpg';
+        homard2.id = "homard";
+
+        const poisson_rouge1 = new Image(75,75);
+        poisson_rouge1.src = './assets/poisson_rouge.jpg';
+        poisson_rouge1.id = "poisson_rouge";
+
+        const poisson_rouge2 = new Image(75,75);
+        poisson_rouge2.src = './assets/poisson_rouge.jpg';
+        poisson_rouge2.id = "poisson_rouge";
+     
+        const requin1 = new Image(75,75);
+        requin1.src = './assets/requin.jpg';
+        requin1.id = "requin";
+
+        const requin2 = new Image(75,75);
+        requin2.src = './assets/requin.jpg';
+        requin2.id = "requin";
+
+        const serpent_mer1 = new Image(75,75);
+        serpent_mer1.src = './assets/serpent_mer.jpg';
+        serpent_mer1.id = "serpent_mer";
+
+        const serpent_mer2 = new Image(75,75);
+        serpent_mer2.src = './assets/serpent_mer.jpg';
+        serpent_mer2.id = "serpent_mer";
+
+        const tortue1 = new Image(75,75);
+        tortue1.src = "./assets/tortue.jpg";
+        tortue1.id = "tortue";
+
+        const tortue2 = new Image(75,75);
+        tortue2.src = "./assets/tortue.jpg";
+        tortue2.id = "tortue";
+
+        const images = [baleine1, baleine2, requin1, requin2, crocodile1, crocodile2, grenouille1, grenouille2, homard1, homard2, poisson_rouge1, poisson_rouge2, serpent_mer1, serpent_mer2, tortue1, tortue2];
+
+        var shuf_images = images.sort(() => (Math.random() > .5) ? 2 : -1);
+
+        for (var i =0; i<images.length; i++){
+            let box = document.createElement('div')
+            box.className = 'item'
+            box.appendChild(shuf_images[i]);
+            box.dataset.imageId = shuf_images[i].id;
+
+            box.onclick = function(){
+                this.classList.add('boxOpen')
+                setTimeout(function(){
+                    if(document.querySelectorAll('.boxOpen').length > 1){
+                        if(document.querySelectorAll('.boxOpen')[0].dataset.imageId == document.querySelectorAll('.boxOpen')[1].dataset.imageId){
+                            document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch')
+                            document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch')
+                            document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
+                            document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
+
+                            if(document.querySelectorAll('.boxMatch').length == images.length){
+                                alert('win')
+                            }
+                        } else {
+                            document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
+                            document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
+                        }
+                    }
+                },500)
+            }
+
+            document.querySelector('.game').appendChild(box);
+        }
+
+    </script>
+</body>
+</html>
