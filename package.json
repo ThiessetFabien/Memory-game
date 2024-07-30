@@ -1,7 +1,7 @@
 {
   "name": "memory-game",
   "version": "1.0.0",
-  "description": "memory game JS ce code est un jeu de mémoire basé sur des images.",
+  "description": "Memory game JS avec des images générées par IA.",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
