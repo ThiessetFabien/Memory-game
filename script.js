@@ -1,23 +1,20 @@
-let images = ["baleine", "requin", "crocodile", "grenouille", "homard", "poisson_rouge", "serpent_mer", "tortue"];
+const images = ["whale", "shark", "crocodile", "frog", "lobster", "goldfish", "sea_serpent", "tortoise"];
 
 let verifiedImages = [...images, ...images].sort(() => (Math.random() > .5) ? 2 : -1);
 
-verifiedImages.map((item,i) => 
-{
-    let box = document.createElement('div'); 
-        let img = document.createElement('img');
-        img.src = './assets/' + verifiedImages[i] + '.jpg';
-        img.alt = item;
-        box.appendChild(img);
+verifiedImages.map((item,i) => {
+    const box = document.createElement('div'); 
+    const img = document.createElement('img');
+    img.src = `./assets/${verifiedImages[i]}.jpg`;
+    img.alt = item;
+    box.appendChild(img);
 
     box.className = 'item';
     box.dataset.imageId = item;
 
-        box.onclick = function () 
-        {
+        box.onclick = function () {
             this.classList.add('boxOpen')
-            setTimeout(function () 
-            {
+            setTimeout(function () {
                 if (document.querySelectorAll('.boxOpen').length > 1) 
                 {
                     if (document.querySelectorAll('.boxOpen')[0].dataset.imageId === document.querySelectorAll('.boxOpen')[1].dataset.imageId) 

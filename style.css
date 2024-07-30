@@ -1,13 +1,11 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
 }
 
-body
-{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +13,7 @@ body
     background: #0a2463;
 }
 
-.container
-{
+.container {
     position: relative;
     display: flex;
     justify-content: center;

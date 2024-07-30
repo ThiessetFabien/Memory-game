@@ -1,0 +1,27 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "memory game JS ce code est un jeu de mémoire basé sur des images.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiessetFabien/memory-game.git"
+  },
+  "author": "Thiesset Fabien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiessetFabien/memory-game/issues"
+  },
+  "homepage": "https://github.com/ThiessetFabien/memory-game#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.8.0",
+    "prettier": "^3.3.3"
+  }
+}
